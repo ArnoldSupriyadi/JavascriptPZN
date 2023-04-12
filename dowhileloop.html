@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For loop</title>
+    <title>Do While Loop</title>
   </head>
   <body>
     <script>
-      for (counter = 1; counter <= 10; counter++) {
-        document.writeln(`Perulangan ke ${counter} </br>`);
-      }
+      let counter = 1;
+      do {
+        document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        counter++;
+      } while (counter <= 10);
     </script>
   </body>
 </html>
