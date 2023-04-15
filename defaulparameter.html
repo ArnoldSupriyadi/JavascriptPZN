@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Function</title>
+    <title>Default Parameter</title>
   </head>
   <body>
     <script>
-      //membuat function
-      function sayHelloWorld() {
-        document.writeln(`<p>Hello World</p>`);
+      function register(name, gender = "UNKNOWN") {
+        console.info(name);
+        console.info(gender);
       }
 
-      sayHelloWorld();
-      sayHelloWorld();
+      register("Eko", "Male");
+      register("budi");
+      register("Joko", undefined);
     </script>
   </body>
 </html>
