@@ -7,6 +7,45 @@
     <title>Getter and Setter</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      // const person1 = {
+      //   firtName: "Eko",
+      //   lastName: "Arnold",
+      //   get fullName() {
+      //     return `${this.firtName} ${this.lastName}`;
+      //   },
+      // };
+
+      // // otomatis memanggil get fullName()
+      // console.info(person.fullName);
+
+      // const perso2n = {
+      //   firstName: "Arnold",
+      //   lastName: "Supriyadi",
+      //   fullName: "Anjayyy",
+      // };
+
+      // person.firstName = "Budi";
+      // console.info(person2.fullName);
+
+      const person1 = {
+        firtName: "Eko",
+        lastName: "Arnold",
+        get fullName() {
+          return `${this.firtName} ${this.lastName}`;
+        },
+        set fullName(value) {
+          const array = value.split(" ");
+          this.firtName = array[0];
+          this.lastName = array[1];
+        },
+      };
+
+      person1.fullName = "Arnold Supriyadi";
+      console.table(person1);
+
+      person1.fullName = "John Wick";
+      console.table(person1);
+    </script>
   </body>
 </html>

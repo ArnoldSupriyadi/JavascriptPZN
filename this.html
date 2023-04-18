@@ -7,6 +7,30 @@
     <title>This</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      // console.info(this);
+
+      // function sample() {
+      //   console.info(this);
+
+      //   function inner() {
+      //     console.info(this);
+      //   }
+
+      //   inner();
+      // }
+
+      // sample();
+
+      const person = {
+        name: "Indah",
+        sayHello: function (name) {
+          //this = person
+          console.info(`Hi ${name}, my name is ${this.name}`);
+        },
+      };
+
+      person.sayHello("Anong");
+    </script>
   </body>
 </html>

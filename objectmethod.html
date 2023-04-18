@@ -7,6 +7,23 @@
     <title>Object Method</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      // const person = {
+      //   name: "Arnold",
+      //   sayHello: function (name) {
+      //     document.writeln(`Hello ${name}`);
+      //   },
+      // };
+
+      const person = {
+        name: "Arnold S",
+      };
+
+      person.sayHello = function (name) {
+        alert(`Hello${name}`);
+      };
+
+      person.sayHello("Arnold");
+    </script>
   </body>
 </html>

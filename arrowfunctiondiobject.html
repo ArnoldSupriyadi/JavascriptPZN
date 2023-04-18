@@ -7,6 +7,16 @@
     <title>Arrow Function di Object</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      const person = {
+        name: "Arnold",
+        sayHello: (name) => {
+          console.info(this);
+          console.info(`Hallo ${name}, my name is ${this.name}`);
+        },
+      };
+
+      person.sayHello("Anong");
+    </script>
   </body>
 </html>
