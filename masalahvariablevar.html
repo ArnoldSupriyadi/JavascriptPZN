@@ -7,6 +7,16 @@
     <title>Masalah Variable Var</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      //global scope
+      var i = 20;
+
+      for (var i = 0; i < 10; i++) {
+        //local scope
+        console.table(`Local ${i}`);
+      }
+
+      console.table(`Global ${i}`);
+    </script>
   </body>
 </html>

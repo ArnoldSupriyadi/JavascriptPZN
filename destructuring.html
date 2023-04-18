@@ -4,9 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Destructuring</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      // const names = ["Arnold", "Supriyadi", "Ngoding", "Imam", "Revi"];
+      // let [firstName, middleName, lastName, ...others] = names;
+
+      // console.info(firstName);
+      // console.info(middleName);
+      // console.info(lastName);
+      // console.info(others);
+
+      const person = {
+        firstName: "Eko",
+        lastName: "Arnold",
+        address: {
+          street: "Jalan Belum Ada",
+          city: "Jakarta",
+          country: "Indonesia",
+        },
+
+        hobby: "Game",
+        channel: "Progammer Zaman Now",
+      };
+
+      // const firstName = person.firstName;
+      // const lastName = person.lastName;
+      let { firstName, lastName, address, city, ...others } = person;
+      console.info(firstName);
+      console.info(lastName);
+      console.info(address);
+      console.info(others);
+    </script>
   </body>
 </html>
