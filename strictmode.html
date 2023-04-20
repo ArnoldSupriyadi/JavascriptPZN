@@ -7,6 +7,18 @@
     <title>Strict Mode</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function useStrictMode() {
+        "use strict";
+        const person = {
+          firstName: "Eko",
+        };
+        with (person) {
+          console.info(firstName);
+        }
+      }
+
+      useStrictMode();
+    </script>
   </body>
 </html>

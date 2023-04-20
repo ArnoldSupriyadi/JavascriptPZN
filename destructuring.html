@@ -8,13 +8,15 @@
   </head>
   <body>
     <script>
-      // const names = ["Arnold", "Supriyadi", "Ngoding", "Imam", "Revi"];
-      // let [firstName, middleName, lastName, ...others] = names;
+      {
+        const names = ["Arnold", "Supriyadi", "Ngoding", "Imam", "Revi"];
+        let [firstName, middleName, lastName, ...others] = names;
 
-      // console.info(firstName);
-      // console.info(middleName);
-      // console.info(lastName);
-      // console.info(others);
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+      }
 
       const person = {
         firstName: "Eko",
@@ -31,11 +33,57 @@
 
       // const firstName = person.firstName;
       // const lastName = person.lastName;
-      let { firstName, lastName, address, city, ...others } = person;
+      // let { firstName, lastName, address, city, ...others } = person;
+      let {
+        firstName,
+        lastName,
+        address: { city, street, country },
+        ...others
+      } = person;
       console.info(firstName);
       console.info(lastName);
-      console.info(address);
+      console.info(city);
+      console.info(street);
+      console.info(country);
       console.info(others);
+
+      function displayPerson({ firstName, middleName, lastName }) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      const person2 = {
+        firstName: "arnold",
+        middleName: "Supriyadi",
+        lastName: "Jago Coding",
+      };
+
+      displayPerson(person2);
+
+      function sum([first, second]) {
+        return first + second;
+      }
+
+      console.info(sum([10, 10]));
+      console.info(sum([20, 10]));
+
+      {
+        const names = ["anong"];
+        const [firstName, middleName = "unknown", lastName = "unknown"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      {
+        const { firstName: namaDepan, middleName: namaTengah, lastName: namaBelakang } = person;
+
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+      }
     </script>
   </body>
 </html>
